@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="icon" href="/diary/favicon.ico">
+</head>
+<body>
+
+<nav>
+  <div class="burger" onclick="openMenu()">☰</div>
+
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="#">Новости</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="#">Ученики</a>
+    <a href="#">Галерея</a>
+  </div>
+
+  <div class="login">
+    <button id="openPopup">Войти</button>
+    <img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA2NCcgc3Ryb2tlPScjNzA3MDcwJz48ZyBjbGFzcz0nbWVjdHJsX3N0cm9rZScgZmlsbD0nbm9uZSc+PGNpcmNsZSBjeD0nMzInIGN5PSczMicgcj0nMzAuMjUnIHN0cm9rZS13aWR0aD0nMS41Jy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoLjkgMCAwIC45IDEwLjQzMSAxMC40MzEpJyBzdHJva2Utd2lkdGg9JzInPjxjaXJjbGUgY3g9JzI0LjI1JyBjeT0nMTgnIHI9JzknLz48cGF0aCBkPSdNMTEuMiA0MGExIDEgMCAxMTI2LjEgMCcvPjwvZz48L2c+PC9zdmc+">
+  </div>
+</nav>
+
+<div class="menu-overlay" onclick="closeMenu()"></div>
+
+<div class="popup-menu">
+  <a href="index.html">Главная</a>
+  <a href="#">Новости</a>
+  <a href="schedule.html">Расписание</a>
+  <a href="#">Ученики</a>
+  <a href="#">Галерея</a>
+</div>
+
+<header class="head">
+    <h1>Расписание</h1>
+</header>
+
+
+<div class="schedule">
+
+  <!-- Заголовки дней -->
+  <div class="day">Пн</div>
+  <div class="day">Вт</div>
+  <div class="day">Ср</div>
+  <div class="day">Чт</div>
+  <div class="day">Пт</div>
+
+  <!-- 1 урок -->
+  <div class="lesson">Алгебра<br><span>09:05–09:45</span></div>
+  <div class="lesson">Русский язык<br><span>09:05–09:45</span></div>
+  <div class="lesson">История<br><span>09:05–09:45</span></div>
+  <div class="lesson">Биология<br><span>09:05–09:45</span></div>
+  <div class="lesson">Музыка<br><span>09:05–09:45</span></div>
+  <!-- 2 урок -->
+  <div class="lesson">Геометрия<br><span>09:55–10:35</span></div>
+  <div class="lesson">Русский язык<br><span>09:55–10:35</span></div>
+  <div class="lesson">Биология<br><span>09:55–10:35</span></div>
+  <div class="lesson">История<br><span>09:55–10:35</span></div>
+  <div class="lesson">Русский язык<br><span>09:55–10:35</span></div>
+
+  <!-- 3 урок -->
+  <div class="lesson">Английский<br><span>10:45–11:25</span></div>
+  <div class="lesson">История<br><span>10:45–11:25</span></div>
+  <div class="lesson">Русский язык<br><span>10:45–11:25</span></div>
+  <div class="lesson">Алгебра<br><span>10:45–11:25</span></div>
+  <div class="lesson">История<br><span>10:45–11:25</span></div>
+
+  <!-- 4 урок -->
+  <div class="lesson">Литература<br><span>11:35–12:15</span></div>
+  <div class="lesson">Литература<br><span>11:35–12:15</span></div>
+  <div class="lesson">Функц. грамотность<br><span>11:35–12:15</span></div>
+  <div class="lesson">Геометрия<br><span>11:35–12:15</span></div>
+  <div class="lesson">Литература<br><span>11:35–12:15</span></div>
+
+  <!-- 5 урок -->
+  <div class="lesson">Русский язык<br><span>12:35–13:15</span></div>
+  <div class="lesson">Вероятность<br><span>12:35–13:15</span></div>
+  <div class="lesson">География<br><span>12:35–13:15</span></div>
+  <div class="lesson">Физкультура<br><span>12:35–13:15</span></div>
+  <div class="lesson">Информатика<br><span>12:35–13:15</span></div>
+
+  <!-- 6 урок -->
+  <div class="lesson">География<br><span>13:35–14:15</span></div>
+  <div class="lesson">Физика<br><span>13:35–14:15</span></div>
+  <div class="lesson">Физкультура<br><span>13:35–14:15</span></div>
+  <div class="lesson">Английский<br><span>13:35–14:15</span></div>
+  <div class="lesson">ИЗО<br><span>13:35–14:15</span></div>
+
+  <!-- 7 урок -->
+  <div class="lesson">История<br><span>14:25–15:05</span></div>
+  <div class="lesson">Проектная работа<br><span>14:25–15:05</span></div>
+  <div class="lesson">—<br><span>14:25–15:05</span></div>
+  <div class="lesson">Физика<br><span>14:25–15:05</span></div>
+  <div class="lesson">Алгебра<br><span>14:25–15:05</span></div>
+
+</div>
+
+
+
+<div id="popup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <div class="popup-item">
+            <h2>Вход в аккаунт</h2>
+            <p>Имя пользователя</p>
+            <input type="text">
+            <p>Пароль</p>
+            <input type="text">
+            <a href="https://web.max.ru/" id="popup-item-enter-1" class="popup-item-enter">Войти</a>
+            <a id="popup-item-enter-2" class="popup-item-enter">Зарегистрироваться</a>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById("openPopup").onclick = function() {
+document.getElementById("popup").style.display = "flex";
+}
+document.getElementById("closePopup").onclick = function() {
+document.getElementById("popup").style.display = "none";
+}
+window.onclick = function(event) {
+if (event.target == document.getElementById("popup")) {
+document.getElementById("popup").style.display = "none";
+}
+}
+</script>
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+  current = index;
+}
+
+function nextSlide() {
+  showSlide((current + 1) % slides.length);
+}
+
+function prevSlide() {
+  showSlide((current - 1 + slides.length) % slides.length);
+}
+
+function goSlide(index) {
+  showSlide(index);
+}
+
+setInterval(() => {
+  nextSlide();
+}, 3000);
+</script>
+<script>
+function openMenu() {
+  document.querySelector('.popup-menu').classList.add('active');
+  document.querySelector('.menu-overlay').classList.add('active');
+}
+
+function closeMenu() {
+  document.querySelector('.popup-menu').classList.remove('active');
+  document.querySelector('.menu-overlay').classList.remove('active');
+}
+</script>
+
+
+<footer>
+  <p>© 2025 Сайт 7-Б класса</p>
+</footer>
+
+</body>
+</html>

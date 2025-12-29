@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="burger" onclick="openMenu()">☰</div>
+
+  <div class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="#">Новости</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="#">Ученики</a>
+    <a href="#">Галерея</a>
+  </div>
+
+  <div class="login">
+    <button id="openPopup">Войти</button>
+    <img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA2NCcgc3Ryb2tlPScjNzA3MDcwJz48ZyBjbGFzcz0nbWVjdHJsX3N0cm9rZScgZmlsbD0nbm9uZSc+PGNpcmNsZSBjeD0nMzInIGN5PSczMicgcj0nMzAuMjUnIHN0cm9rZS13aWR0aD0nMS41Jy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoLjkgMCAwIC45IDEwLjQzMSAxMC40MzEpJyBzdHJva2Utd2lkdGg9JzInPjxjaXJjbGUgY3g9JzI0LjI1JyBjeT0nMTgnIHI9JzknLz48cGF0aCBkPSdNMTEuMiA0MGExIDEgMCAxMTI2LjEgMCcvPjwvZz48L2c+PC9zdmc+">
+  </div>
+</nav>
+
+<div class="menu-overlay" onclick="closeMenu()"></div>
+
+<div class="popup-menu">
+  <a href="index.html">Главная</a>
+  <a href="#">Новости</a>
+  <a href="schedule.html">Расписание</a>
+  <a href="#">Ученики</a>
+  <a href="#">Галерея</a>
+</div>
+
+<div class="slider">
+  <div class="slides">
+    <div id="first" class="slide active">Первый слайд</div>
+    <div id="second" class="slide">Второй слайд</div>
+    <div id="third" class="slide">Третий слайд</div>
+  </div>
+
+  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+  <div class="dots">
+    <span class="dot active" onclick="goSlide(0)"></span>
+    <span class="dot" onclick="goSlide(1)"></span>
+    <span class="dot" onclick="goSlide(2)"></span>
+  </div>
+</div>
+
+<!--
+<header>
+  <h1>Сайт 7-Б класса (Прототип)</h1>
+  <p>Наша школьная жизнь, новости и расписание</p>
+</header>
+-->
+
+<div class="container">
+  <div class="block">
+    <h2>О нашем классе</h2>
+    <p>Мы — дружный 7-Б класс. Здесь собрана важная информация о нашей школьной жизни, мероприятиях и достижениях.</p>
+  </div>
+
+  <div class="block">
+    <h2>Последние новости</h2>
+    <ul>
+      <li>Линейка 23 декабря</li>
+      <li>Контрольная по математике — 15 декабря</li>
+      <li>Подготовка к школьному концерту</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>Расписание (пример)</h2>
+    <p>Понедельник: Математика, Русский, История, Физика</p>
+    <p>Вторник: Биология, География, Английский, Физкультура</p>
+  </div>
+</div>
+
+<div id="popup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <div class="popup-item">
+            <h2>Вход в аккаунт</h2>
+            <p>Имя пользователя</p>
+            <input type="text">
+            <p>Пароль</p>
+            <input type="text">
+            <a href="https://web.max.ru/" id="popup-item-enter-1" class="popup-item-enter">Войти</a>
+            <a id="popup-item-enter-2" class="popup-item-enter">Зарегистрироваться</a>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById("openPopup").onclick = function() {
+document.getElementById("popup").style.display = "flex";
+}
+document.getElementById("closePopup").onclick = function() {
+document.getElementById("popup").style.display = "none";
+}
+window.onclick = function(event) {
+if (event.target == document.getElementById("popup")) {
+document.getElementById("popup").style.display = "none";
+}
+}
+</script>
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+  current = index;
+}
+
+function nextSlide() {
+  showSlide((current + 1) % slides.length);
+}
+
+function prevSlide() {
+  showSlide((current - 1 + slides.length) % slides.length);
+}
+
+function goSlide(index) {
+  showSlide(index);
+}
+
+setInterval(() => {
+  nextSlide();
+}, 3000);
+</script>
+<script>
+function openMenu() {
+  document.querySelector('.popup-menu').classList.add('active');
+  document.querySelector('.menu-overlay').classList.add('active');
+}
+
+function closeMenu() {
+  document.querySelector('.popup-menu').classList.remove('active');
+  document.querySelector('.menu-overlay').classList.remove('active');
+}
+</script>
+
+
+
+<footer>
+  <p>© 2025 Сайт 7-Б класса</p>
+</footer>
+
+</body>
+</html>
