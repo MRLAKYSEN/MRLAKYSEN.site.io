@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-
-  </style>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
 <nav>
   <div class="burger" onclick="openMenu()">☰</div>
 
@@ -39,51 +34,6 @@
   <a href="#">Галерея</a>
 </div>
 
-<div class="slider">
-  <div class="slides">
-    <div id="first" class="slide active">Первый слайд</div>
-    <div id="second" class="slide">Второй слайд</div>
-    <div id="third" class="slide">Третий слайд</div>
-  </div>
-
-  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
-  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
-
-  <div class="dots">
-    <span class="dot active" onclick="goSlide(0)"></span>
-    <span class="dot" onclick="goSlide(1)"></span>
-    <span class="dot" onclick="goSlide(2)"></span>
-  </div>
-</div>
-
-<!--
-<header>
-  <h1>Сайт 7-Б класса (Прототип)</h1>
-  <p>Наша школьная жизнь, новости и расписание</p>
-</header>
--->
-
-<div class="container">
-  <div class="block">
-    <h2>О нашем классе</h2>
-    <p>Мы — дружный 7-Б класс. Здесь собрана важная информация о нашей школьной жизни, мероприятиях и достижениях.</p>
-  </div>
-
-  <div class="block">
-    <h2>Последние новости</h2>
-    <ul>
-      <li>Линейка 23 декабря</li>
-      <li>Контрольная по математике — 15 декабря</li>
-      <li>Подготовка к школьному концерту</li>
-    </ul>
-  </div>
-
-  <div class="block">
-    <h2>Расписание (пример)</h2>
-    <p>Понедельник: Математика, Русский, История, Физика</p>
-    <p>Вторник: Биология, География, Английский, Физкультура</p>
-  </div>
-</div>
 
 <div id="popup" class="popup" style="display:none;">
     <div class="popup-content">
@@ -99,6 +49,7 @@
         </div>
     </div>
 </div>
+
 
 <script>
 document.getElementById("openPopup").onclick = function() {
@@ -153,8 +104,6 @@ function closeMenu() {
   document.querySelector('.menu-overlay').classList.remove('active');
 }
 </script>
-
-
 
 <footer>
   <p>© 2025 Сайт 7-Б класса</p>
