@@ -1,0 +1,94 @@
+.news {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.news-card {
+  aspect-ratio: 1 / 1;        /* ГАРАНТИЯ квадрата */
+  width: 400px;
+  border: 1px solid #b0b0b0;  /* серая рамка */
+  background: transparent;
+  display: grid;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  margin: 10px;
+}
+
+.news-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.news-info {
+  height: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.news-info h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.news-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+.popup-content {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0px
+}
+
+.popup-item {
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* весь popup */
+  padding: 0px
+}
+
+/* СЛАЙДЕР — верх */
+.slider {
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ТЕКСТ — низ */
+.popup-text {
+  height: 50%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute
+}
+
+
+
+@media (max-width: 768px) {
+  .news {
+    grid-template-columns: 1fr;
+  }
+  .news-card {
+    width: 100%;
+    max-width: 350px;
+    justify-items: center;
+  }
+  .news-card h4: {
+    width: 50%
+  }
+}

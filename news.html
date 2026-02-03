@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Новости</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="news.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -49,6 +50,85 @@
         </div>
     </div>
 </div>
+<div class="news">
+    <div class="news-card">
+      <img src="back.jpg" alt="">
+      <div class="news-info">
+        <h2>Заголовок новости</h2>
+        <p>Короткий текст новости без лишнего оформления.</p>
+        <button id="openPopupNews">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="back.jpg" alt="">
+      <div class="news-info">
+        <h2>Заголовок новости</h2>
+        <p>Короткий текст новости без лишнего оформления.</p>
+        <button id="openPopupNews-1">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="back.jpg" alt="">
+      <div class="news-info">
+        <h2>Заголовок новости</h2>
+        <p>Короткий текст новости без лишнего оформления.</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="back.jpg" alt="">
+      <div class="news-info">
+        <h2>Заголовок новости</h2>
+        <p>Короткий текст новости без лишнего оформления.</p>
+      </div>
+    </div>
+</div>
+
+<div id="popup-news" class="popup" style="display:none;">
+    <div class="popup-content">
+        <span id="closePopupNews" class="close">&times;</span>
+        <div class="popup-item">
+
+        </div>
+    </div>
+</div>
+
+
+<div id="popup-news-1" class="popup" style="display:none;">
+  <div class="popup-content">
+    <span id="closePopupNews-1" class="close">&times;</span>
+
+    <div class="popup-item">
+
+      <!-- ВЕРХ: слайдер -->
+      <div class="slider">
+        <div class="slides">
+          <div class="slide active">Первый слайд</div>
+          <div class="slide">Второй слайд</div>
+          <div class="slide">Третий слайд</div>
+        </div>
+
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+        <div class="dots">
+          <span class="dot active" onclick="goSlide(0)"></span>
+          <span class="dot" onclick="goSlide(1)"></span>
+          <span class="dot" onclick="goSlide(2)"></span>
+        </div>
+      </div>
+
+      <!-- НИЗ: текст -->
+      <div class="popup-text">
+        <h2>Заголовок новости</h2>
+        <p>Текст новости. Здесь описание, дата и т.д.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 <script>
@@ -61,6 +141,33 @@ document.getElementById("popup").style.display = "none";
 window.onclick = function(event) {
 if (event.target == document.getElementById("popup")) {
 document.getElementById("popup").style.display = "none";
+}
+}
+</script>
+<script>
+document.getElementById("openPopupNews").onclick = function() {
+document.getElementById("popup-news").style.display = "flex";
+}
+document.getElementById("closePopupNews").onclick = function() {
+document.getElementById("popup-news").style.display = "none";
+}
+window.onclick = function(event) {
+if (event.target == document.getElementById("popup-news")) {
+document.getElementById("popup-news").style.display = "none";
+}
+}
+</script>
+
+<script>
+document.getElementById("openPopupNews-1").onclick = function() {
+document.getElementById("popup-news-1").style.display = "flex";
+}
+document.getElementById("closePopupNews-1").onclick = function() {
+document.getElementById("popup-news-1").style.display = "none";
+}
+window.onclick = function(event) {
+if (event.target == document.getElementById("popup-news-1")) {
+document.getElementById("popup-news-1").style.display = "none";
 }
 }
 </script>
@@ -104,6 +211,8 @@ function closeMenu() {
   document.querySelector('.menu-overlay').classList.remove('active');
 }
 </script>
+
+
 
 <footer>
   <p>© 2025 Сайт 7-Б класса</p>
