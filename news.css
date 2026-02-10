@@ -74,7 +74,23 @@
 }
 
 .close {
-  position: absolute
+    position: absolute;
+    z-index: 1000;
+    right: 20px;
+    padding: 5px;
+    background: red;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    margin: 5px;
+    align-items: center;
+    align-content: center;
+}
+
+.openPopupNews-class {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 

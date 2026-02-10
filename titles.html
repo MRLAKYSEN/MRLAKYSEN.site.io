@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
+  <title>О нас</title>
+  <link rel="stylesheet" href="titles.css">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-
-  </style>
 </head>
 <body>
-
 <nav>
   <div class="burger" onclick="openMenu()">☰</div>
 
@@ -38,58 +34,40 @@
 
 </div>
 
-<div class="slider">
-  <div class="slides">
-    <div id="first" class="slide active">
-        <div class="inf">
-        <p>Читайте последние новости.</p>
-        <a href="news.html">Подробнее.</a>
-        </div>
-    </div>
-    <div id="second" class="slide">Второй слайд</div>
-    <div id="third" class="slide">Третий слайд</div>
+
+
+<section class="about-hero">
+  <h1>О нас</h1>
+  <p>Мы — команда, разработавшая сайт нашего класса</p>
+</section>
+
+<section class="team">
+  <div class="team-card">
+    <img src="avatar.jpg" alt="Разработчик">
+    <h3>Сенник Владимир Антонович</h3>
+    <span>Frontend / JavaScript / идея </span>
+    <p>Руководил проектом, отвечал за дизайн, адаптацию под телефоны, интерфейс, слайдеры, pop-up окна и интерактивные элементы.</p>
   </div>
 
-  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
-  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
-
-  <div class="dots">
-    <span class="dot active" onclick="goSlide(0)"></span>
-    <span class="dot" onclick="goSlide(1)"></span>
-    <span class="dot" onclick="goSlide(2)"></span>
-  </div>
-</div>
-
-<!--
-<header>
-  <h1>Сайт 7-Б класса (Прототип)</h1>
-  <p>Наша школьная жизнь, новости и расписание</p>
-</header>
--->
-
-<div class="container">
-  <div class="block">
-    <h2>О нашем классе</h2>
-    <p>Мы — дружный 7-Б класс. Здесь собрана важная информация о нашей школьной жизни, мероприятиях и достижениях.</p>
-  </div>
-<!--
-  <div class="block">
-    <h2>Последние новости</h2>
-    <ul>
-      <li>Линейка 23 декабря</li>
-      <li>Контрольная по математике — 15 декабря</li>
-      <li>Подготовка к школьному концерту</li>
-    </ul>
+  <div class="team-card">
+    <img src="work-my-dear-chat-gpt.jpg" alt="Разработчик">
+    <h3>Алексей Иванов</h3>
+    <span>Консультант-помощник</span>
+    <p>Консультировал и дорабатывал некоторые объекты.</p>
   </div>
 
 
-  <div class="block">
-    <h2>Расписание (пример)</h2>
-    <p>Понедельник: Математика, Русский, История, Физика</p>
-    <p>Вторник: Биология, География, Английский, Физкультура</p>
-  </div>
-   -->
-</div>
+</section>
+
+<section class="goal">
+  <h2>Наша цель</h2>
+  <p>
+    Создать удобный и современный сайт для класса,
+    где собрана вся важная информация: новости,
+    расписание и жизнь класса.
+  </p>
+</section>
+
 
 
 <div id="popup" class="popup" style="display:none;">
@@ -106,9 +84,6 @@
         </div>
     </div>
 </div>
-
-
-
 <script>
 document.getElementById("openPopup").onclick = function() {
 document.getElementById("popup").style.display = "flex";
@@ -171,3 +146,4 @@ function closeMenu() {
 
 </body>
 </html>
+

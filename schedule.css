@@ -44,7 +44,7 @@ footer {
   .schedule {
     grid-template-columns: repeat(5, minmax(160px, 1fr));
     overflow-x: auto;
-    zoom: 2.2;
+    zoom: 2;
     gap: 5px;
   }
   .lesson {
