@@ -48,45 +48,47 @@
         </div>
     </div>
 </div>
+
 <div class="news">
     <div class="news-card">
-      <img src="back.jpg" alt="">
+      <img src="school-outside.jpg" alt="">
       <div class="news-info">
-        <p style="color: grey">02.10.23</p>
-        <h2>Заголовок новости</h2>
-        <p>Короткий текст новости без лишнего оформления.</p>
+        <p style="color: grey">13.02.26</p>
+        <h2>День рождения школы</h2>
+        <p>В этом году нашей школе исполняется 60 лет...</p>
         <button class="openPopupNews-class" id="openPopupNews">Подробнее</button>
       </div>
     </div>
 
 
     <div class="news-card">
-      <img src="back.jpg" alt="">
+      <img src="news-3-prev.jpg" alt="">
       <div class="news-info">
-        <p style="color: grey">02.10.23</p>
-        <h2>Заголовок новости</h2>
-        <p>Короткий текст новости без лишнего оформления.</p>
+        <p style="color: grey">27.01.26</p>
+        <h2>Акция "Читаем блокадную книгу"!</h2>
+        <p>Наши одноклассники(цы) приняли участие в этом мероприятии...</p>
         <button class="openPopupNews-class" id="openPopupNews-1">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="newyear.png" alt="">
+      <div class="news-info">
+        <p style="color: grey">25.12.25</p>
+        <h2>С новым годом!!!</h2>
+        <p>Как наш класс отметил новый год в школе...</p>
+        <button class="openPopupNews-class" id="openPopupNews-2">Подробнее</button>
       </div>
     </div>
 
     <div class="news-card">
       <img src="back.jpg" alt="">
       <div class="news-info">
-        <p style="color: grey">02.10.23</p>
-        <h2>Заголовок новости</h2>
-        <p>Короткий текст новости без лишнего оформления.</p>
-        <button class="openPopupNews-class" id="openPopupNews-1">Подробнее</button>
-      </div>
-    </div>
+        <p style="color: grey">??.??.??</p>
+        <h2>Других новостей пока нет.</h2>
+        <p>В будущей здесь будут появляться другие новости</p>
+    <!--    <button class="openPopupNews-class" id="openPopupNews-1">Подробнее</button> -->
 
-    <div class="news-card">
-      <img src="back.jpg" alt="">
-      <div class="news-info">
-        <p style="color: grey">02.10.23</p>
-        <h2>Заголовок новости</h2>
-        <p>Короткий текст новости без лишнего оформления.</p>
-        <button class="openPopupNews-class" id="openPopupNews-1">Подробнее</button>
       </div>
     </div>
 </div>
@@ -102,9 +104,9 @@
       <!-- ВЕРХ: слайдер -->
       <div class="slider">
         <div class="slides">
-          <div class="slide active">Первый слайд</div>
-          <div class="slide">Второй слайд</div>
-          <div class="slide">Третий слайд</div>
+          <div class="slide active" style="background: url(school-outside.jpg) center / cover no-repeat;"></div>
+          <div class="slide" style="background: url(school-outside.jpg) center / cover no-repeat;"></div>
+          <div class="slide" style="background: url(school-outside.jpg) center / cover no-repeat;"></div>
         </div>
 
         <button class="arrow left" onclick="prevSlide()">&#10094;</button>
@@ -119,8 +121,8 @@
 
       <!-- НИЗ: текст -->
       <div class="popup-text">
-        <h2>Заголовок новости</h2>
-        <p>Текст новости. Здесь описание, дата и т.д.</p>
+        <h2>День рождения школы</h2>
+        <p>В этом году нашей школе исполняется 60 лет.</p>
       </div>
 
     </div>
@@ -136,9 +138,9 @@
       <!-- ВЕРХ: слайдер -->
       <div class="slider">
         <div class="slides">
-          <div class="slide active">Первый слайд</div>
-          <div class="slide">Второй слайд</div>
-          <div class="slide">Третий слайд</div>
+          <div class="slide active" style="background: url(news-3-1.jpg) center / cover no-repeat;"></div>
+          <div class="slide" style="background: url(news-3-2.jpg) center / cover no-repeat;"></div>
+          <div class="slide" style="background: url(news-3-3.jpg) center / cover no-repeat;"></div>
         </div>
 
         <button class="arrow left" onclick="prevSlide()">&#10094;</button>
@@ -153,8 +155,42 @@
 
       <!-- НИЗ: текст -->
       <div class="popup-text">
-        <h2>Заголовок новости</h2>
-        <p>Текст новости. Здесь описание, дата и т.д.</p>
+        <h2>Акция "Читаем блокадную книгу"!</h2>
+        <p>Наши одноклассники(цы) приняли участие в этом мероприятии.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="popup-news-2" class="popup" style="display:none;">
+  <div class="popup-content">
+    <span id="closePopupNews-2" class="close">&times;</span>
+
+    <div class="popup-item">
+
+      <!-- ВЕРХ: слайдер -->
+      <div class="slider">
+        <div class="slides">
+          <div class="slide active" style="background: url(news-2-1.jpg) center / cover no-repeat;"></div>
+          <div class="slide" style="background: url(news-2-2.jpg) center / cover no-repeat;"></div>
+          <div class="slide" style="background: url(news-2-3.jpg) center / cover no-repeat;"></div>
+        </div>
+
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+        <div class="dots">
+          <span class="dot active" onclick="goSlide(0)"></span>
+          <span class="dot" onclick="goSlide(1)"></span>
+          <span class="dot" onclick="goSlide(2)"></span>
+        </div>
+      </div>
+
+      <!-- НИЗ: текст -->
+      <div class="popup-text">
+        <h2>С новым годом!!!</h2>
+        <p>Как наш класс отметил новый год в школе. </p>
       </div>
 
     </div>
@@ -199,6 +235,19 @@ document.getElementById("popup-news-1").style.display = "none";
 window.onclick = function(event) {
 if (event.target == document.getElementById("popup-news-1")) {
 document.getElementById("popup-news-1").style.display = "none";
+}
+}
+</script>
+<script>
+document.getElementById("openPopupNews-2").onclick = function() {
+document.getElementById("popup-news-2").style.display = "flex";
+}
+document.getElementById("closePopupNews-2").onclick = function() {
+document.getElementById("popup-news-2").style.display = "none";
+}
+window.onclick = function(event) {
+if (event.target == document.getElementById("popup-news-2")) {
+document.getElementById("popup-news-2").style.display = "none";
 }
 }
 </script>

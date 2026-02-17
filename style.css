@@ -344,12 +344,22 @@ nav a {
   background: url(school-outside.jpg) center / cover no-repeat;
 }
 
+#second {
+  background: url(backboard.png) center / cover no-repeat;
+}
+
+#third {
+  background: url(about.png) center / cover no-repeat;
+}
+
 .inf {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
   color: white;
   margin-top: 100%
 
 }
+
+
 
 .inf p {
   font_size: 20px;
